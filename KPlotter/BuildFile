@@ -1,0 +1,23 @@
+<use name=FWCore/Framework>
+<use name=DataFormats/HcalDigi>
+<use name=DataFormats/HcalRecHit>
+<use name=FWCore/Utilities>
+
+<use name=FWCore/MessageLogger>
+<use name=CondFormats/HcalObjects>
+
+<use name=FWCore/PluginManager>
+<use name=FWCore/ParameterSet>
+<use name=DataFormats/FEDRawData>
+<use name=TBDataFormats/HcalTBObjects>
+
+<flags EDM_PLUGIN=1>
+<flags CXXFLAGS="-O0 -g3 -fno-inline">
+
+<use name=PhysicsTools/UtilAlgos>
+<export>
+   <lib name=subsystemKPlotter>
+   <use name=FWCore/Framework>
+   <use name=FWCore/PluginManager>
+   <use name=FWCore/ParameterSet>
+</export>

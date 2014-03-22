@@ -1,0 +1,41 @@
+# Set a limit on the number of events to process per run
+EEVENTLIMIT=1000
+
+# Set the name of a pedestals file to use (if desired)
+#PEDESTALFILE=a.txt
+
+# Set the name of a gains file to use (if desired)
+#GAINSFILE=
+
+# FED list to unpack
+FEDS="700"
+
+# First FED
+#FIRSTFED=
+
+# Mode of operation [MTCC|TB06|TESTSTAND|USC]
+# MTCC      - not available currently
+#
+# TB06      - uses PoolSource
+#           - assumes FIRSTFED=700
+#           - unpacks trigger data
+#
+# TESTSTAND - uses HcalTBSource
+#           - assumes FIRSTFED=20 if not set.
+#           - unpacks trigger data
+#
+# USC       - uses HcalTBSource
+#           - ignores FIRSTFED and FED environment variables
+#           - tries to unpack all HCAL FEDs 700-731
+#           - unpacks trigger data
+#
+#MODE=TESTSTAND
+MODE=USC
+
+# "Printf"-style format string for the input filename -
+#                     allows input of run number only
+#      - include the full path to the file in the string.
+#
+FORMAT="/data/spool/HTBqc_%06d.root"
+#OUTFORMAT="/scratch/home/daq/kellogg/KPlotterWorkArea/CMSSW_2_1_11/src/tools/KPlotter/test/Run_%06d_old.root"
+OUTFORMAT="./Run_%06d.root"

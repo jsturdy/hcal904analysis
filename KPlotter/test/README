@@ -1,0 +1,20 @@
+In order to run this package you need to do several things:
+
+  First:  set up your CMSSW environment by executing the following command:
+    eval `scramv1 runtime -csh` //for a tcsh or csh shell environment
+    eval `scramv1 runtime -sh` //for a zsh or bash shell environment
+  Second you will need to navigate to the KPlotter/test directory
+    Open the kplotter.cfg file:
+      Modify the fileNames parameter to point to the file you want to run on
+      Modify the value of trigType if you desire
+  Finally you can execute the command
+
+cmsRun kplotter.cfg
+
+which will run the job and create the root file that contains the histograms.  To view them type root -l <filename>
+  Alternatively, you can run
+
+./runKPlotter.sh <run number>
+
+
+N.B - Do not use run number of 0 as an input as this will cause the job to seg fault, also, not specifying a run number will default to 0.
